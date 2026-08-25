@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polley Consulting — AI Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="brand">
+          <div class="brand-mark">PC</div>
+          <div class="brand-text">
+            <h1>Polley Consulting</h1>
+            <p>AI Assistant</p>
+          </div>
+        </div>
+        <div class="status" id="status">
+          <span class="dot" id="status-dot"></span>
+          <span id="status-text">Checking model…</span>
+        </div>
+      </header>
+
+      <main class="chat" id="chat">
+        <div class="message assistant">
+          <div class="bubble">
+            Hello! I'm the Polley Consulting assistant. Ask me about our
+            services, engagement process, or how we can help your business.
+          </div>
+        </div>
+      </main>
+
+      <form class="composer" id="composer">
+        <input
+          id="input"
+          type="text"
+          autocomplete="off"
+          placeholder="Type your question…"
+          required
+        />
+        <button type="submit" id="send">Send</button>
+      </form>
+    </div>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
