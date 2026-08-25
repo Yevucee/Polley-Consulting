@@ -1,6 +1,6 @@
 {
   "name": "Polley-Consulting",
-  "install": "python3 -m venv .venv && ./.venv/bin/pip install --upgrade pip && ./.venv/bin/pip install -r requirements.txt",
+  "install": "sudo apt-get update -qq && sudo apt-get install -y -qq python3.12-venv && python3 -m venv .venv && ./.venv/bin/pip install --upgrade pip && ./.venv/bin/pip install -r requirements.txt",
   "terminals": [
     {
       "name": "web",
