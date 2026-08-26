@@ -200,16 +200,14 @@ export default function Home() {
       </section>
 
       <section className="africa" id="about">
-        <p className="sectionLabel">Africa</p>
+        <p className="sectionLabel">Across cultures</p>
         <div>
-          <h2>I first arrived in Ghana in 2003.</h2>
+          <h2>An outsider can miss the meaning. They can also see the pattern.</h2>
           <p className="largeCopy">
-            I have lived there, studied there, worked there — and been wrong there.
-            That last part matters.
+            After more than twenty years working across cultures, I have learned to use both positions: close enough to understand, distant enough to notice.
           </p>
           <p>
-            Africa is not one market, one culture or one convenient sentence. My
-            work starts by refusing to pretend it is.
+            Across Africa, Europe and elsewhere, I pay attention to how trust is earned, how decisions are really made, and what familiarity has made invisible. A new perspective is useful—but only when it comes with the humility to test it.
           </p>
         </div>
       </section>
