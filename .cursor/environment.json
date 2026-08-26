@@ -1,4 +1,4 @@
 {
-  "install": "echo 'Static Samuel Polley site — no dependencies to install.'",
-  "start": "python3 -m http.server 8000 --bind 0.0.0.0 --directory /workspace"
+  "install": "cd Samuel-Polley-Website-GitHub && npm ci",
+  "start": "cd Samuel-Polley-Website-GitHub && npm run dev -- --host 0.0.0.0 --port 3000"
 }

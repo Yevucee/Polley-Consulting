@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Samuel Polley">
-  <rect width="64" height="64" rx="14" fill="#14110e"/>
-  <path d="M8 50h48" stroke="#c51a1b" stroke-width="3"/>
-  <path d="M8 54h48" stroke="#fbba00" stroke-width="3"/>
-  <path d="M8 58h48" stroke="#6ab165" stroke-width="3"/>
-  <text x="32" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#f4efe6">SP</text>
-</svg>

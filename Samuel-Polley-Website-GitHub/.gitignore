@@ -1,9 +1,7 @@
-.DS_Store
 node_modules/
-.env
-.env.local
+dist/
 .wrangler/
 .vinext/
-dist/
-.next/
+.env
+.env.local
 *.log
