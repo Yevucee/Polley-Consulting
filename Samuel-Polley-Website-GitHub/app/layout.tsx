@@ -7,14 +7,14 @@ const siteUrl =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Samuel Polley — Investigator, journalist, cultural intelligence",
+    default: "Samuel Polley | Investigator, journalist, cultural intelligence",
     template: "%s · Samuel Polley",
   },
   description:
-    "Investigative research, field intelligence and cultural insight across Africa, Europe and the spaces between.",
+    "Investigative research, field intelligence and cultural insight across Africa, Europe and elsewhere.",
   openGraph: {
     type: "website",
-    title: "Samuel Polley — The story changes when you get closer",
+    title: "Samuel Polley | The story changes when you get closer",
     description:
       "Investigator, journalist and cultural intelligence adviser. Fieldwork, private intelligence and stories that change the room.",
     images: [
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1732,
         height: 908,
-        alt: "Samuel Polley — The story changes when you get closer",
+        alt: "Samuel Polley | The story changes when you get closer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Samuel Polley — The story changes when you get closer",
+    title: "Samuel Polley | The story changes when you get closer",
     description: "Investigator, journalist and cultural intelligence adviser.",
     images: ["/og.png"],
   },

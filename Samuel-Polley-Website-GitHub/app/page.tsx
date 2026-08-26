@@ -83,7 +83,7 @@ export default function Home() {
           <p className="eyebrow">Investigator · Journalist · Cultural intelligence</p>
           <h1>The story changes<br />when you get closer.</h1>
           <p className="heroIntro">
-            I find out what is really going on — inside companies, between people
+            I find out what is really going on: inside companies, between people
             and beneath the official version.
           </p>
         </div>
@@ -120,11 +120,11 @@ export default function Home() {
         <div className="aliceIntro">
           <p>
             With Alice, I investigate companies, individuals, family enterprises
-            and unfamiliar markets — often before a consequential decision.
+            and unfamiliar markets, often before a decision that matters.
           </p>
           <p>
-            Open sources meet fieldwork. Relationship maps meet judgement. The
-            work is private because the decisions are.
+            I use open sources, fieldwork and relationship mapping. Then comes
+            judgement. Most of the work remains private.
           </p>
         </div>
         <div className="aliceGrid">
@@ -135,7 +135,7 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <p className="discretion">Discretion is not a footnote. It is part of the method.</p>
+        <p className="discretion">Discretion is part of the method.</p>
       </section>
 
       <section className="method">
@@ -178,7 +178,7 @@ export default function Home() {
             and testing the official picture against everyday reality.
           </p>
           <p>
-            That work became useful because it was there. Not because it was loud.
+            It was useful because I had gone there and paid attention.
           </p>
         </div>
       </section>
@@ -202,12 +202,12 @@ export default function Home() {
       <section className="africa" id="about">
         <p className="sectionLabel">Across cultures</p>
         <div>
-          <h2>An outsider can miss the meaning. They can also see the pattern.</h2>
+          <h2>An outsider will miss things. They may also notice what everyone else has stopped seeing.</h2>
           <p className="largeCopy">
-            After more than twenty years working across cultures, I have learned to use both positions: close enough to understand, distant enough to notice.
+            I have worked across cultures for more than twenty years. I try to get close enough to understand a place without losing the advantage of seeing it with fresh eyes.
           </p>
           <p>
-            Across Africa, Europe and elsewhere, I pay attention to how trust is earned, how decisions are really made, and what familiarity has made invisible. A new perspective is useful—but only when it comes with the humility to test it.
+            Across Africa, Europe and elsewhere, I pay attention to how trust is earned, how decisions are made and what familiarity has made invisible. A fresh view only matters if you are willing to test it.
           </p>
         </div>
       </section>
@@ -225,7 +225,7 @@ export default function Home() {
           </p>
           <p>
             I ask direct questions. I notice small things. I am comfortable not
-            knowing — for a while.
+            knowing, at least for a while.
           </p>
           <div className="identityLine">
             <span>British</span><span>Based in Zurich</span><span>Deeply connected to Ghana</span>
@@ -259,9 +259,9 @@ export default function Home() {
           <h2>Put me in a room.</h2>
           <div>
             <p>
-              I speak about the things people sense but have not yet named: what
-              the official story leaves out, how culture changes decisions, what
-              AI is doing to investigation, and why ground truth still matters.
+              I speak about investigation, culture and the gap between the official
+              story and what is actually happening. I also talk about how AI is
+              changing the work.
             </p>
             <p>
               I do not deliver a lecture. I bring the room into the investigation.
