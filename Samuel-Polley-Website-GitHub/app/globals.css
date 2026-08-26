@@ -31,8 +31,7 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
   align-items: flex-end;
 }
 .heroFilm,
-.bridge video,
-.namibiaVisual--footage video {
+.bridge video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -94,19 +93,6 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
   font-weight: 350;
   color: rgba(255,255,255,.9);
 }
-.locationStamp {
-  position: absolute;
-  z-index: 2;
-  right: 42px;
-  bottom: 42px;
-  display: grid;
-  gap: 5px;
-  text-align: right;
-  font-size: 10px;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.7);
-}
 
 .opening {
   min-height: 78vh;
@@ -119,7 +105,6 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .opening .sectionLabel { padding-top: 14px; color: var(--rust); }
 .opening h2,
 .method h2,
-.fieldInterlude h2,
 .about h2,
 .speaking h2,
 .contact h2 {
@@ -213,89 +198,6 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .aliceGrid article + article { border-left: 1px solid rgba(242,239,230,.26); padding-left: 34px; }
 .aliceGrid h3 { margin: 0 0 42px; font-family: "Iowan Old Style", "Palatino Linotype", Baskerville, Georgia, serif; font-size: 25px; font-weight: 400; }
 .aliceGrid p { max-width: 320px; margin: 0; font-size: 16px; line-height: 1.6; color: rgba(242,239,230,.64); }
-.discretion { grid-column: 1 / -1; margin: 34px 0 0; text-align: right; font-size: 11px; letter-spacing: .08em; color: rgba(242,239,230,.54); }
-
-.namibiaVisual {
-  position: relative;
-  width: 100%;
-  min-height: 65vh;
-  overflow: hidden;
-  color: var(--paper);
-}
-.namibiaVisual--placeholder {
-  background: var(--rust);
-}
-.namibiaVisual--placeholder::before {
-  content: "01";
-  position: absolute;
-  top: 12%;
-  right: -3%;
-  font-family: "Iowan Old Style", "Palatino Linotype", Baskerville, Georgia, serif;
-  font-size: clamp(210px, 27vw, 430px);
-  line-height: .7;
-  letter-spacing: -.08em;
-  color: rgba(242,239,230,.06);
-}
-.namibiaVisual--placeholder::after {
-  content: "";
-  position: absolute;
-  inset: 22% -20% auto 18%;
-  height: 46%;
-  border: 1px solid rgba(242,239,230,.15);
-  border-radius: 50%;
-  transform: rotate(-11deg);
-  box-shadow: 0 0 0 52px rgba(242,239,230,.035), 0 0 0 104px rgba(242,239,230,.025);
-}
-.namibiaVisualShade {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(12,12,10,.42), rgba(12,12,10,.08) 42%, rgba(12,12,10,.62));
-}
-.namibiaVisualMeta {
-  position: relative;
-  z-index: 1;
-  min-height: 65vh;
-  padding: 44px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.namibiaVisualTopline,
-.namibiaVisualFooter {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  font-size: 10px;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: rgba(242,239,230,.68);
-}
-.namibiaVisualFooter {
-  padding-top: 22px;
-  border-top: 1px solid rgba(242,239,230,.24);
-}
-.fieldInterlude {
-  background: var(--paper);
-  padding: 125px 7vw;
-  display: grid;
-  grid-template-columns: minmax(110px, .48fr) 1.35fr 1fr;
-  gap: 5vw;
-  align-items: start;
-}
-.fieldInterlude .sectionLabel { padding-top: 8px; color: var(--rust); }
-.fieldInterlude h2 {
-  margin: 0;
-  max-width: 640px;
-  font-size: clamp(38px, 4.2vw, 64px);
-  line-height: 1.04;
-}
-.fieldInterlude > p:last-child {
-  margin: 8px 0 0;
-  max-width: 420px;
-  font-size: 17px;
-  line-height: 1.7;
-  color: rgba(19,20,17,.7);
-}
 
 .bridge {
   position: relative;
@@ -318,16 +220,6 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
   letter-spacing: -.04em;
 }
 .bridge p em { color: #d9c29c; font-weight: 400; }
-.bridge > span {
-  position: absolute;
-  z-index: 1;
-  right: 36px;
-  bottom: 36px;
-  font-size: 10px;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.72);
-}
 
 .about {
   padding: 135px 7vw;
@@ -401,9 +293,6 @@ footer span:last-child { text-align: right; }
   .opening .sectionLabel { padding-top: 0; }
   .methodIntro { position: static; margin-bottom: 60px; }
   .aliceIntro { margin-top: 60px; max-width: 700px; }
-  .fieldInterlude { grid-template-columns: 1fr; gap: 32px; padding-top: 110px; padding-bottom: 110px; }
-  .namibiaVisual,
-  .namibiaVisualMeta { min-height: 50vh; }
 }
 
 @media (max-width: 700px) {
@@ -414,11 +303,9 @@ footer span:last-child { text-align: right; }
   .heroCopy { padding: 0 20px 122px; }
   .hero h1 { font-size: clamp(51px, 16vw, 82px); }
   .heroIntro { margin-top: 26px; }
-  .locationStamp { right: auto; left: 20px; bottom: 30px; text-align: left; }
   .opening,
   .method,
   .alice,
-  .fieldInterlude,
   .about,
   .speaking,
   .contact { padding-left: 20px; padding-right: 20px; }
@@ -435,15 +322,8 @@ footer span:last-child { text-align: right; }
   .aliceGrid article { min-height: 0; padding: 30px 0 34px; }
   .aliceGrid article + article { border-left: 0; border-top: 1px solid rgba(242,239,230,.26); padding-left: 0; }
   .aliceGrid h3 { margin-bottom: 18px; }
-  .discretion { text-align: left; line-height: 1.5; }
-  .namibiaVisual,
-  .namibiaVisualMeta { min-height: 50vh; }
-  .namibiaVisualMeta { padding: 28px 20px; }
-  .namibiaVisualFooter { flex-wrap: wrap; }
-  .fieldInterlude { padding-top: 81px; padding-bottom: 81px; }
   .bridge { min-height: 76vh; }
   .bridge > p { padding: 0 20px 92px; }
-  .bridge > span { left: 20px; right: auto; bottom: 32px; }
   .about,
   .speaking { padding-top: 100px; padding-bottom: 100px; }
   .aboutBody { padding-top: 20px; }

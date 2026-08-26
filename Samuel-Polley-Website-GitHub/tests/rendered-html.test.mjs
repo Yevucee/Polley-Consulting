@@ -32,9 +32,9 @@ test("server-renders the finished Samuel Polley website", async () => {
   assert.match(html, /The story changes/);
   assert.match(html, /Most of my work is not made public/);
   assert.match(html, /Private intelligence/);
-  assert.match(html, /The official picture was tidy/);
+  assert.match(html, /From above, you see the pattern/);
   assert.match(html, /I bring the room into the investigation/);
-  assert.doesNotMatch(html, /Tools I build|AI-assisted|vinext-starter|Your site is taking shape|FieldLens/);
+  assert.doesNotMatch(html, /Field note 01|Ground truth|namibiaVisual|Tools I build|AI-assisted|vinext-starter|Your site is taking shape|FieldLens/);
 });
 
 test("keeps the named films and removes starter content", async () => {

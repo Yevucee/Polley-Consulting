@@ -19,8 +19,6 @@ const films = {
     poster: `${assetBase}/croatia-bridge-poster.png`,
     label: "Aerial view of a bridge over the Croatian coast",
   },
-  // Set when Namibia coast footage is ready; replaces the rust placeholder panel.
-  namibiaCoast: null as null | { src: string; poster: string; label: string },
 };
 
 const work = [
@@ -89,10 +87,6 @@ export default function Home() {
             and beneath the official version.
           </p>
         </div>
-        <div className="locationStamp">
-          <span>Walvis Bay region</span>
-          <span>Namibia · Field observation</span>
-        </div>
       </section>
 
       <section className="opening" id="work">
@@ -137,7 +131,6 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <p className="discretion">Discretion is part of the method.</p>
       </section>
 
       <section className="method">
@@ -156,47 +149,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        className={`namibiaVisual${films.namibiaCoast ? " namibiaVisual--footage" : " namibiaVisual--placeholder"}`}
-        aria-label="Field note from Namibia"
-      >
-        {films.namibiaCoast ? (
-          <>
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster={films.namibiaCoast.poster}
-              aria-label={films.namibiaCoast.label}
-            >
-              <source src={films.namibiaCoast.src} type="video/mp4" />
-            </video>
-            <div className="namibiaVisualShade" aria-hidden="true" />
-          </>
-        ) : null}
-        <div className="namibiaVisualMeta">
-          <div className="namibiaVisualTopline">
-            <span>Field note 01</span>
-            <span>Namibia</span>
-          </div>
-          <div className="namibiaVisualFooter">
-            <span>Walvis Bay</span>
-            <span>Swakopmund</span>
-            <span>Observed on the ground</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="fieldInterlude">
-        <p className="sectionLabel">Ground truth</p>
-        <h2>The official picture was tidy. The place was not.</h2>
-        <p>
-          I spent time between Walvis Bay and Swakopmund, listening, observing
-          and checking the official picture against everyday reality.
-        </p>
-      </section>
-
       <section className="bridge">
         <video
           autoPlay
@@ -210,7 +162,6 @@ export default function Home() {
         </video>
         <div className="bridgeShade" />
         <p>From above, you see the pattern.<br /><em>On the ground, you learn what it means.</em></p>
-        <span>Croatia · Observed from the air</span>
       </section>
 
       <section className="about" id="about">
