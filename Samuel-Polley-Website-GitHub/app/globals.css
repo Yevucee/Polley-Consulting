@@ -120,9 +120,7 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .opening h2,
 .method h2,
 .fieldInterlude h2,
-.africa h2,
-.aboutSamuel h2,
-.maker h2,
+.about h2,
 .speaking h2,
 .contact h2 {
   font-family: "Iowan Old Style", "Palatino Linotype", Baskerville, Georgia, serif;
@@ -331,53 +329,27 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
   color: rgba(255,255,255,.72);
 }
 
-.africa {
-  padding: 145px 7vw;
-  display: grid;
-  grid-template-columns: .45fr 1.55fr;
-  gap: 7vw;
-  background: var(--paper);
-}
-.africa .sectionLabel { color: var(--rust); padding-top: 14px; }
-.africa h2 { margin: 0 0 36px; font-size: clamp(48px, 5.8vw, 86px); line-height: 1; }
-.africa .largeCopy { max-width: 1000px; margin: 0 0 46px; font-family: "Iowan Old Style", "Palatino Linotype", Baskerville, Georgia, serif; font-size: clamp(30px, 3.1vw, 46px); line-height: 1.25; color: var(--rust); }
-.africa div > p:last-child { max-width: 670px; margin: 0; font-size: 19px; line-height: 1.65; color: rgba(19,20,17,.68); }
-
-.aboutSamuel {
+.about {
   padding: 135px 7vw;
   background: #e6e0d4;
   display: grid;
   grid-template-columns: 1.2fr .8fr;
   gap: 9vw;
 }
-.aboutSamuel .sectionLabel { color: var(--rust); }
-.aboutSamuel h2 { margin: 0; font-size: clamp(42px, 4.8vw, 72px); line-height: 1.08; }
+.about .sectionLabel { color: var(--rust); }
+.about h2 { margin: 0; font-size: clamp(42px, 4.8vw, 72px); line-height: 1.08; }
 .aboutBody { padding-top: 56px; }
 .aboutBody > p { margin: 0 0 28px; font-family: "Iowan Old Style", "Palatino Linotype", Baskerville, Georgia, serif; font-size: clamp(21px, 2vw, 29px); line-height: 1.45; color: rgba(19,20,17,.75); }
 .identityLine { display: flex; flex-wrap: wrap; gap: 0; margin-top: 54px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .identityLine span { padding: 15px 20px 15px 0; margin-right: 20px; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
 .identityLine span + span { border-left: 1px solid var(--line); padding-left: 20px; }
 
-.maker {
-  padding: 150px 7vw;
-  background: var(--paper);
-  display: grid;
-  grid-template-columns: .4fr 1.2fr .95fr;
-  gap: 5vw;
-}
-.maker .sectionLabel { color: var(--rust); padding-top: 12px; }
-.maker h2 { margin: 0; font-size: clamp(43px, 5.1vw, 76px); line-height: 1.02; }
-.makerCopy p { margin: 14px 0 32px; font-size: 18px; line-height: 1.7; color: rgba(19,20,17,.7); }
-.toolList { margin: 0 0 38px; padding: 0; border-top: 1px solid var(--line); list-style: none; }
-.toolList li { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 10px; letter-spacing: .13em; text-transform: uppercase; }
-.makerCopy .makerAside { padding-top: 30px; border-top: 1px solid var(--line); font-family: "Iowan Old Style", "Palatino Linotype", Baskerville, Georgia, serif; font-size: 25px; line-height: 1.42; color: var(--rust); }
-
-.speaking { padding: 145px 7vw; background: #d7d8d1; }
+.speaking { padding: 110px 7vw; background: #d7d8d1; }
 .speaking .sectionLabel { color: var(--rust); }
 .speakingGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10vw; align-items: start; }
-.speaking h2 { margin: 0; font-size: clamp(58px, 7vw, 104px); line-height: .92; }
+.speaking h2 { margin: 0; font-size: clamp(48px, 6vw, 88px); line-height: .95; }
 .speakingGrid div { padding-top: 12px; }
-.speakingGrid div p { margin: 0 0 28px; font-family: "Iowan Old Style", "Palatino Linotype", Baskerville, Georgia, serif; font-size: clamp(22px, 2vw, 29px); line-height: 1.48; color: rgba(19,20,17,.73); }
+.speakingGrid div p { margin: 0; max-width: 520px; font-family: "Iowan Old Style", "Palatino Linotype", Baskerville, Georgia, serif; font-size: clamp(21px, 2vw, 27px); line-height: 1.48; color: rgba(19,20,17,.73); }
 
 .contact {
   min-height: 88vh;
@@ -424,9 +396,7 @@ footer span:last-child { text-align: right; }
   .opening,
   .method,
   .alice,
-  .africa,
-  .aboutSamuel,
-  .maker { grid-template-columns: 1fr; }
+  .about { grid-template-columns: 1fr; }
   .opening { gap: 32px; }
   .opening .sectionLabel { padding-top: 0; }
   .methodIntro { position: static; margin-bottom: 60px; }
@@ -434,7 +404,6 @@ footer span:last-child { text-align: right; }
   .fieldInterlude { grid-template-columns: 1fr; gap: 32px; padding-top: 110px; padding-bottom: 110px; }
   .namibiaVisual,
   .namibiaVisualMeta { min-height: 50vh; }
-  .maker { gap: 32px; }
 }
 
 @media (max-width: 700px) {
@@ -450,9 +419,7 @@ footer span:last-child { text-align: right; }
   .method,
   .alice,
   .fieldInterlude,
-  .africa,
-  .aboutSamuel,
-  .maker,
+  .about,
   .speaking,
   .contact { padding-left: 20px; padding-right: 20px; }
   .opening { min-height: auto; padding-top: 90px; padding-bottom: 90px; display: block; }
@@ -477,9 +444,7 @@ footer span:last-child { text-align: right; }
   .bridge { min-height: 76vh; }
   .bridge > p { padding: 0 20px 92px; }
   .bridge > span { left: 20px; right: auto; bottom: 32px; }
-  .africa,
-  .aboutSamuel,
-  .maker,
+  .about,
   .speaking { padding-top: 100px; padding-bottom: 100px; }
   .aboutBody { padding-top: 20px; }
   .identityLine { display: grid; }

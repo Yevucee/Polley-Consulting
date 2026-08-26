@@ -213,29 +213,14 @@ export default function Home() {
         <span>Croatia · Observed from the air</span>
       </section>
 
-      <section className="africa" id="about">
-        <p className="sectionLabel">Across cultures</p>
-        <div>
-          <h2>An outsider will miss things. They may also notice what everyone else has stopped seeing.</h2>
-          <p className="largeCopy">
-            I have worked across cultures for more than twenty years. I try to get close enough to understand a place without losing the advantage of seeing it with fresh eyes.
-          </p>
-          <p>
-            Across Africa, Europe and elsewhere, I pay attention to how trust is earned, how decisions are made and what familiarity has made invisible. A fresh view only matters if you are willing to test it.
-          </p>
-        </div>
-      </section>
-
-      <section className="aboutSamuel">
+      <section className="about" id="about">
         <div className="aboutTitle">
           <p className="sectionLabel">Samuel Polley</p>
           <h2>Journalist by instinct.<br />Investigator by habit.<br />Communicator by trade.</h2>
         </div>
         <div className="aboutBody">
           <p>
-            I have worked in politics, media, campaigns, digital infrastructure
-            and family enterprise. I have hosted rooms, made films, built tools
-            and entered places I did not yet understand.
+            I have worked in politics, media, campaigns and family enterprise.
           </p>
           <p>
             I ask direct questions. I notice small things. I am comfortable not
@@ -247,38 +232,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="maker">
-        <p className="sectionLabel">Tools I build</p>
-        <h2>If the tool I need does not exist, I make it.</h2>
-        <div className="makerCopy">
-          <p>
-            I build AI-assisted research tools to find connections, test claims,
-            map relationships and make sense of large amounts of information.
-          </p>
-          <ul className="toolList" aria-label="Examples of tools Samuel builds">
-            <li>Research systems</li>
-            <li>Relationship maps</li>
-            <li>Evidence workflows</li>
-            <li>Interactive reports</li>
-          </ul>
-          <p className="makerAside">
-            I design and prototype them myself. The useful ones become part of the method.
-          </p>
-        </div>
-      </section>
-
       <section className="speaking">
         <p className="sectionLabel">Speaking & private briefings</p>
         <div className="speakingGrid">
           <h2>Put me in a room.</h2>
           <div>
             <p>
-              I speak about investigation, culture and the gap between the official
-              story and what is actually happening. I also talk about how AI is
-              changing the work.
-            </p>
-            <p>
-              I do not deliver a lecture. I bring the room into the investigation.
+              Conferences, boardrooms and private gatherings. I do not deliver a
+              lecture. I bring the room into the investigation.
             </p>
           </div>
         </div>
@@ -287,7 +248,7 @@ export default function Home() {
       <section className="contact" id="contact">
         <p className="sectionLabel">A conversation</p>
         <h2>Bring me the question<br />nobody is answering.</h2>
-        <p>Investigations. Field assignments. Private briefings. Speaking. Unusual commissions.</p>
+        <p>Investigations. Private briefings. Speaking.</p>
         <div className="contactLinks">
           <a href="https://wa.me/233553685102" target="_blank" rel="noreferrer">Start a private conversation</a>
           <a href="https://www.linkedin.com/in/samuelpolley/" target="_blank" rel="noreferrer">LinkedIn</a>
