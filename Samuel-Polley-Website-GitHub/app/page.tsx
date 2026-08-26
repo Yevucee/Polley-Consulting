@@ -19,6 +19,8 @@ const films = {
     poster: `${assetBase}/croatia-bridge-poster.png`,
     label: "Aerial view of a bridge over the Croatian coast",
   },
+  // Set when Namibia coast footage is ready; replaces the rust placeholder panel.
+  namibiaCoast: null as null | { src: string; poster: string; label: string },
 };
 
 const work = [
@@ -154,33 +156,45 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="fieldStory">
-        <div className="fieldNote" aria-label="Field note from Namibia">
-          <div className="fieldNoteTopline">
+      <section
+        className={`namibiaVisual${films.namibiaCoast ? " namibiaVisual--footage" : " namibiaVisual--placeholder"}`}
+        aria-label="Field note from Namibia"
+      >
+        {films.namibiaCoast ? (
+          <>
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster={films.namibiaCoast.poster}
+              aria-label={films.namibiaCoast.label}
+            >
+              <source src={films.namibiaCoast.src} type="video/mp4" />
+            </video>
+            <div className="namibiaVisualShade" aria-hidden="true" />
+          </>
+        ) : null}
+        <div className="namibiaVisualMeta">
+          <div className="namibiaVisualTopline">
             <span>Field note 01</span>
             <span>Namibia</span>
           </div>
-          <blockquote>
-            The official picture was tidy. The place was not.
-          </blockquote>
-          <div className="fieldNoteFooter">
+          <div className="namibiaVisualFooter">
             <span>Walvis Bay</span>
             <span>Swakopmund</span>
             <span>Observed on the ground</span>
           </div>
         </div>
-        <div className="fieldCopy">
-          <p className="sectionLabel">Ground truth</p>
-          <h2>From above, a landscape looks empty.</h2>
-          <p className="fieldLead">On the ground, it is full of systems.</p>
-          <p>
-            I spent time between Walvis Bay and Swakopmund, listening, observing
-            and testing the official picture against everyday reality.
-          </p>
-          <p>
-            It was useful because I had gone there and paid attention.
-          </p>
-        </div>
+      </section>
+
+      <section className="fieldInterlude">
+        <p className="sectionLabel">Ground truth</p>
+        <h2>The official picture was tidy. The place was not.</h2>
+        <p>
+          I spent time between Walvis Bay and Swakopmund, listening, observing
+          and checking the official picture against everyday reality.
+        </p>
       </section>
 
       <section className="bridge">

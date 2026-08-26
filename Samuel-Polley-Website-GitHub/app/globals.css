@@ -31,7 +31,8 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
   align-items: flex-end;
 }
 .heroFilm,
-.bridge video {
+.bridge video,
+.namibiaVisual--footage video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -118,7 +119,7 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .opening .sectionLabel { padding-top: 14px; color: var(--rust); }
 .opening h2,
 .method h2,
-.fieldCopy h2,
+.fieldInterlude h2,
 .africa h2,
 .aboutSamuel h2,
 .maker h2,
@@ -216,19 +217,17 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .aliceGrid p { max-width: 320px; margin: 0; font-size: 16px; line-height: 1.6; color: rgba(242,239,230,.64); }
 .discretion { grid-column: 1 / -1; margin: 34px 0 0; text-align: right; font-size: 11px; letter-spacing: .08em; color: rgba(242,239,230,.54); }
 
-.fieldStory { min-height: 92vh; display: grid; grid-template-columns: .9fr 1.1fr; background: var(--mist); }
-.fieldNote {
+.namibiaVisual {
   position: relative;
-  min-height: 760px;
-  padding: 44px;
+  width: 100%;
+  min-height: 65vh;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: var(--rust);
   color: var(--paper);
 }
-.fieldNote::before {
+.namibiaVisual--placeholder {
+  background: var(--rust);
+}
+.namibiaVisual--placeholder::before {
   content: "01";
   position: absolute;
   top: 12%;
@@ -239,7 +238,7 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
   letter-spacing: -.08em;
   color: rgba(242,239,230,.06);
 }
-.fieldNote::after {
+.namibiaVisual--placeholder::after {
   content: "";
   position: absolute;
   inset: 22% -20% auto 18%;
@@ -249,10 +248,22 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
   transform: rotate(-11deg);
   box-shadow: 0 0 0 52px rgba(242,239,230,.035), 0 0 0 104px rgba(242,239,230,.025);
 }
-.fieldNoteTopline,
-.fieldNoteFooter {
+.namibiaVisualShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(12,12,10,.42), rgba(12,12,10,.08) 42%, rgba(12,12,10,.62));
+}
+.namibiaVisualMeta {
   position: relative;
   z-index: 1;
+  min-height: 65vh;
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.namibiaVisualTopline,
+.namibiaVisualFooter {
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -261,23 +272,32 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
   text-transform: uppercase;
   color: rgba(242,239,230,.68);
 }
-.fieldNote blockquote {
-  position: relative;
-  z-index: 1;
-  max-width: 630px;
-  margin: auto 0;
-  font-family: "Iowan Old Style", "Palatino Linotype", Baskerville, Georgia, serif;
-  font-size: clamp(48px, 5.8vw, 86px);
-  font-style: italic;
-  line-height: 1.02;
-  letter-spacing: -.04em;
+.namibiaVisualFooter {
+  padding-top: 22px;
+  border-top: 1px solid rgba(242,239,230,.24);
 }
-.fieldNoteFooter { padding-top: 22px; border-top: 1px solid rgba(242,239,230,.24); }
-.fieldCopy { padding: 9vw 6vw; display: flex; flex-direction: column; justify-content: center; }
-.fieldCopy .sectionLabel { color: var(--rust); }
-.fieldCopy h2 { margin: 0 0 24px; font-size: clamp(44px, 4.6vw, 72px); line-height: 1.02; }
-.fieldLead { margin: 0 0 40px; font-family: "Iowan Old Style", "Palatino Linotype", Baskerville, Georgia, serif; font-size: 29px; line-height: 1.35; color: var(--rust); }
-.fieldCopy > p:not(.sectionLabel):not(.fieldLead) { max-width: 520px; margin: 0 0 18px; font-size: 17px; line-height: 1.7; color: rgba(19,20,17,.7); }
+.fieldInterlude {
+  background: var(--paper);
+  padding: 125px 7vw;
+  display: grid;
+  grid-template-columns: minmax(110px, .48fr) 1.35fr 1fr;
+  gap: 5vw;
+  align-items: start;
+}
+.fieldInterlude .sectionLabel { padding-top: 8px; color: var(--rust); }
+.fieldInterlude h2 {
+  margin: 0;
+  max-width: 640px;
+  font-size: clamp(38px, 4.2vw, 64px);
+  line-height: 1.04;
+}
+.fieldInterlude > p:last-child {
+  margin: 8px 0 0;
+  max-width: 420px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(19,20,17,.7);
+}
 
 .bridge {
   position: relative;
@@ -411,8 +431,9 @@ footer span:last-child { text-align: right; }
   .opening .sectionLabel { padding-top: 0; }
   .methodIntro { position: static; margin-bottom: 60px; }
   .aliceIntro { margin-top: 60px; max-width: 700px; }
-  .fieldStory { grid-template-columns: 1fr; }
-  .fieldNote { min-height: 62vh; }
+  .fieldInterlude { grid-template-columns: 1fr; gap: 32px; padding-top: 110px; padding-bottom: 110px; }
+  .namibiaVisual,
+  .namibiaVisualMeta { min-height: 50vh; }
   .maker { gap: 32px; }
 }
 
@@ -428,7 +449,7 @@ footer span:last-child { text-align: right; }
   .opening,
   .method,
   .alice,
-  .fieldCopy,
+  .fieldInterlude,
   .africa,
   .aboutSamuel,
   .maker,
@@ -448,9 +469,11 @@ footer span:last-child { text-align: right; }
   .aliceGrid article + article { border-left: 0; border-top: 1px solid rgba(242,239,230,.26); padding-left: 0; }
   .aliceGrid h3 { margin-bottom: 18px; }
   .discretion { text-align: left; line-height: 1.5; }
-  .fieldNote { min-height: 54vh; padding: 28px 20px; }
-  .fieldNoteFooter { flex-wrap: wrap; }
-  .fieldCopy { padding-top: 90px; padding-bottom: 90px; }
+  .namibiaVisual,
+  .namibiaVisualMeta { min-height: 50vh; }
+  .namibiaVisualMeta { padding: 28px 20px; }
+  .namibiaVisualFooter { flex-wrap: wrap; }
+  .fieldInterlude { padding-top: 81px; padding-bottom: 81px; }
   .bridge { min-height: 76vh; }
   .bridge > p { padding: 0 20px 92px; }
   .bridge > span { left: 20px; right: auto; bottom: 32px; }
