@@ -2,7 +2,11 @@
 
 ## Photographs of Samuel Polley
 
-Used with permission as the site owner’s own portraits, originally published at [polleyconsulting.com](https://www.polleyconsulting.com/).
+Used with permission as the site owner’s own photographs, originally published at [polleyconsulting.com](https://www.polleyconsulting.com/):
+
+- `samuel-portrait.png` — black-and-white portrait
+- `samuel-alibaba.jpg` — hosting the Alibaba Cloud launch in Accra
+- `ghana-cacao.jpg` — cacao grove in Ghana (temporary still)
 
 ## Temporary aerial stills (Unsplash)
 

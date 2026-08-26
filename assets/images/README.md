@@ -2,8 +2,9 @@
 
 | File | Use |
 | --- | --- |
-| `samuel-portrait.jpg` | About portrait (from polleyconsulting.com) |
+| `samuel-portrait.png` | About portrait (from polleyconsulting.com) |
 | `samuel-alibaba.jpg` | Work still, Alibaba Cloud launch in Accra |
+| `ghana-cacao.jpg` | Temporary slot 05 poster — Ghana cacao grove |
 | `aerial-coast.jpg` | Temporary hero / slot 01 poster |
 | `aerial-city.jpg` | Temporary slot 02 poster |
 | `aerial-mountains.jpg` | Temporary slot 03 poster |
