@@ -1,4 +1,5 @@
 {
   "install": "cd Samuel-Polley-Website-GitHub && npm ci",
-  "start": "cd Samuel-Polley-Website-GitHub && npm run dev -- --host 0.0.0.0 --port 3000"
+  "start": "cd Samuel-Polley-Website-GitHub && npm run dev -- --host 0.0.0.0 --port 3000",
+  "terminals": []
 }

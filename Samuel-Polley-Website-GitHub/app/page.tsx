@@ -4,15 +4,19 @@ export const metadata = {
     "Investigator, journalist and cultural intelligence adviser. Fieldwork, private intelligence and stories that change the room.",
 };
 
+export const dynamic = "force-static";
+
+const assetBase = process.env.GITHUB_PAGES === "true" ? "/Polley-Consulting" : "";
+
 const films = {
   hero: {
-    src: "/namibia-field.m4v",
-    poster: "/namibia-poster.png",
+    src: `${assetBase}/namibia-field.m4v`,
+    poster: `${assetBase}/namibia-poster.png`,
     label: "Aerial view across the Namibian landscape",
   },
   bridge: {
-    src: "/croatia-bridge.m4v",
-    poster: "/croatia-bridge-poster.png",
+    src: `${assetBase}/croatia-bridge.m4v`,
+    poster: `${assetBase}/croatia-bridge-poster.png`,
     label: "Aerial view of a bridge over the Croatian coast",
   },
 };

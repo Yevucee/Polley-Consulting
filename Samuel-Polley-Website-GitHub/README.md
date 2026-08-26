@@ -39,7 +39,26 @@ or whose connection does not autoplay video.
 
 ## Publish from GitHub
 
-This project targets Cloudflare Workers. After pushing it to GitHub, connect the
+### GitHub Pages (this repo)
+
+The site can be published to GitHub Pages at:
+
+**https://yevucee.github.io/Polley-Consulting/**
+
+1. In the repository on GitHub, open **Settings → Pages**
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**
+3. Merge to `main` — the `pages.yml` workflow builds a static export and deploys it
+
+Local check:
+
+```bash
+npm run build:pages
+# static files land in dist/client/
+```
+
+### Cloudflare Workers (optional)
+
+This project can also target Cloudflare Workers. After pushing to GitHub, connect the
 repository in Cloudflare Workers Builds and use:
 
 - Production branch: `main`
