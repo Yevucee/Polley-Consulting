@@ -75,7 +75,7 @@ mv "$TMP_VIDEO" "$OUT_VIDEO"
 trap - EXIT
 
 echo "Poster: $OUT_POSTER"
-ffmpeg -hide_banner -y -ss 00:00:01 -i "$OUT_VIDEO" -frames:v 1 -q:v 2 "$OUT_POSTER"
+ffmpeg -hide_banner -y -ss 00:00:01 -i "$OUT_VIDEO" -frames:v 1 -update 1 -q:v 2 "$OUT_POSTER"
 
 echo
 echo "Done."
