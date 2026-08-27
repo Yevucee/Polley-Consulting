@@ -178,7 +178,7 @@ export default function Home() {
             knowing, at least for a while.
           </p>
           <div className="identityLine">
-            <span>British</span><span>Based in Zurich</span><span>Deeply connected to Ghana</span>
+            <span>British</span><span>Based in Zurich</span><span>At home in unfamiliar places</span>
           </div>
         </div>
       </section>
