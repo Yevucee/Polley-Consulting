@@ -45,6 +45,7 @@ test("keeps the named films and removes starter content", async () => {
   ]);
 
   assert.match(page, /\/namibia-field\.m4v/);
+  assert.match(page, /\/namibia-field-02\.m4v/);
   assert.match(page, /\/croatia-bridge\.m4v/);
   assert.match(page, /On-the-ground verification/);
   assert.doesNotMatch(page, /Global Graduate Academy|FieldLens/);

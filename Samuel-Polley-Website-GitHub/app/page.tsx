@@ -1,3 +1,5 @@
+import HeroFilm from "./HeroFilm";
+
 export const metadata = {
   title: "The story changes when you get closer",
   description:
@@ -10,9 +12,12 @@ const assetBase = process.env.GITHUB_PAGES === "true" ? "/Polley-Consulting" : "
 
 const films = {
   hero: {
-    src: `${assetBase}/namibia-field.m4v`,
+    sources: [
+      `${assetBase}/namibia-field.m4v`,
+      `${assetBase}/namibia-field-02.m4v`,
+    ],
     poster: `${assetBase}/namibia-poster.png`,
-    label: "Aerial view across the Namibian landscape",
+    label: "Aerial views across the Namibian landscape",
   },
   bridge: {
     src: `${assetBase}/croatia-bridge.m4v`,
@@ -58,17 +63,11 @@ export default function Home() {
   return (
     <main>
       <section className="hero" id="top">
-        <video
-          className="heroFilm"
-          autoPlay
-          muted
-          loop
-          playsInline
+        <HeroFilm
+          sources={films.hero.sources}
           poster={films.hero.poster}
-          aria-label={films.hero.label}
-        >
-          <source src={films.hero.src} type="video/mp4" />
-        </video>
+          label={films.hero.label}
+        />
         <div className="heroShade" />
         <header className="siteHeader">
           <a className="wordmark" href="#top">Samuel Polley</a>

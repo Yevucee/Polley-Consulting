@@ -5,15 +5,15 @@ set -euo pipefail
 
 usage() {
   cat <<'EOF'
-Usage: ./scripts/compress-hero-video.sh <input.mp4> [max-megabytes]
+Usage: ./scripts/compress-hero-video.sh <input.mp4> [max-megabytes] [output-basename]
 
 Compresses footage for the hero section and writes:
-  public/namibia-field.m4v
-  public/namibia-poster.png
+  public/<basename>.m4v
+  public/namibia-poster.png   (only for the default basename)
 
 Examples:
   ./scripts/compress-hero-video.sh ~/Downloads/dji_fly_20260216_175918_0185_1771262160517_video.mp4
-  ./scripts/compress-hero-video.sh ./raw-hero.mp4 20
+  ./scripts/compress-hero-video.sh ~/Downloads/dji_fly_20260218_123200_0215_1771429811164_video.mp4 20 namibia-field-02
 
 Requires ffmpeg. Default target size is 20 MB (safe for GitHub web upload).
 EOF
@@ -26,6 +26,7 @@ fi
 
 INPUT="$1"
 MAX_MB="${2:-20}"
+BASENAME="${3:-namibia-field}"
 
 if [[ ! -f "$INPUT" ]]; then
   echo "Input file not found: $INPUT" >&2
@@ -38,7 +39,7 @@ if ! command -v ffmpeg >/dev/null 2>&1; then
 fi
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-OUT_VIDEO="$ROOT/public/namibia-field.m4v"
+OUT_VIDEO="$ROOT/public/${BASENAME}.m4v"
 OUT_POSTER="$ROOT/public/namibia-poster.png"
 TMP_VIDEO="$(mktemp "${TMPDIR:-/tmp}/namibia-hero.XXXXXX.m4v")"
 
@@ -74,16 +75,24 @@ fi
 mv "$TMP_VIDEO" "$OUT_VIDEO"
 trap - EXIT
 
-echo "Poster: $OUT_POSTER"
-ffmpeg -hide_banner -y -ss 00:00:01 -i "$OUT_VIDEO" -frames:v 1 -update 1 -q:v 2 "$OUT_POSTER"
+if [[ "$BASENAME" == "namibia-field" ]]; then
+  echo "Poster: $OUT_POSTER"
+  ffmpeg -hide_banner -y -ss 00:00:01 -i "$OUT_VIDEO" -frames:v 1 -update 1 -q:v 2 "$OUT_POSTER"
+fi
 
 echo
 echo "Done."
 echo "  Video:  $OUT_VIDEO (${SIZE_MB} MB)"
-echo "  Poster: $OUT_POSTER"
+if [[ "$BASENAME" == "namibia-field" ]]; then
+  echo "  Poster: $OUT_POSTER"
+fi
 echo
 echo "Next:"
 echo "  cd \"$ROOT\""
-echo "  git add public/namibia-field.m4v public/namibia-poster.png"
-echo "  git commit -m \"Replace hero video with higher-quality export\""
+if [[ "$BASENAME" == "namibia-field" ]]; then
+  echo "  git add public/namibia-field.m4v public/namibia-poster.png"
+else
+  echo "  git add public/${BASENAME}.m4v"
+fi
+echo "  git commit -m \"Add hero video export\""
 echo "  git push"

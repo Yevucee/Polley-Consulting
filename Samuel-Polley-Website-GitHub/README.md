@@ -26,7 +26,8 @@ npm run lint
 The current films are configured together in the `films` object at the top of
 `app/page.tsx`.
 
-- `public/namibia-field.m4v` and `public/namibia-poster.png` are the hero.
+- `public/namibia-field.m4v`, `public/namibia-field-02.m4v`, and
+  `public/namibia-poster.png` are the hero playlist.
 - `public/croatia-bridge.m4v` and `public/croatia-bridge-poster.png` are the
   bridge sequence and should remain.
 - A future Namibia coast film belongs in the field-story section, replacing the
@@ -54,19 +55,22 @@ On your Mac (with [ffmpeg](https://ffmpeg.org/) installed):
 ```bash
 cd Samuel-Polley-Website-GitHub
 chmod +x scripts/compress-hero-video.sh
+
+# First clip (also refreshes the poster)
 ./scripts/compress-hero-video.sh ~/Downloads/dji_fly_20260216_175918_0185_1771262160517_video.mp4
-git add public/namibia-field.m4v public/namibia-poster.png
-git commit -m "Replace hero video with higher-quality export"
+
+# Second clip for the hero playlist
+./scripts/compress-hero-video.sh ~/Downloads/dji_fly_20260218_123200_0215_1771429811164_video.mp4 20 namibia-field-02
+
+git add public/namibia-field.m4v public/namibia-field-02.m4v public/namibia-poster.png
+git commit -m "Update hero video playlist"
 git push
 ```
 
-The script targets **20 MB** by default (safe for web upload). Pass a second
-argument to change the cap, e.g. `./scripts/compress-hero-video.sh input.mp4 90`
-if you only push via Terminal and want higher quality (stay under 100 MB).
-
-If you prefer not to compress, you can still push the original via Terminal as
-long as it is under 100 MB — just place it at `public/namibia-field.m4v` and
-regenerate the poster with ffmpeg.
+The hero plays both clips back to back, then loops. The script targets **20 MB**
+per file by default (safe for web upload). Pass a second argument to change the
+cap, e.g. `./scripts/compress-hero-video.sh input.mp4 90 namibia-field-02` if
+you only push via Terminal and want higher quality (stay under 100 MB per file).
 
 ## Publish from GitHub
 
