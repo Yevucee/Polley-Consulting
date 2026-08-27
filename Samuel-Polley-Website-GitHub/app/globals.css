@@ -45,7 +45,7 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .heroFilm {
   opacity: 0;
   z-index: 1;
-  transition: opacity 1.4s ease;
+  transition: opacity 2.2s ease-in-out;
 }
 .heroFilm.isVisible {
   opacity: 1;

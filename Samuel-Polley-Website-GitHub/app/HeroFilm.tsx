@@ -2,8 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
-const FADE_MS = 1400;
-const FADE_LEAD_SEC = 1.25;
+const FADE_MS = 2200;
+const FADE_LEAD_SEC = 2.2;
 
 type HeroFilmProps = {
   sources: string[];
