@@ -1,4 +1,5 @@
 import HeroFilm from "./HeroFilm";
+import SiteHeader from "./SiteHeader";
 
 export const metadata = {
   title: "The story changes when you get closer",
@@ -69,15 +70,7 @@ export default function Home() {
           label={films.hero.label}
         />
         <div className="heroShade" />
-        <header className="siteHeader">
-          <a className="wordmark" href="#top">Samuel Polley</a>
-          <nav aria-label="Primary navigation">
-            <a href="#work">Work</a>
-            <a href="#alice">Alice</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </nav>
-        </header>
+        <SiteHeader />
         <div className="heroCopy">
           <p className="eyebrow">Investigator · Journalist · Cultural intelligence</p>
           <h1>The story changes<br />when you get closer.</h1>
