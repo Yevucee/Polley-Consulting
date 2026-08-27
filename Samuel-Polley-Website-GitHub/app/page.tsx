@@ -14,10 +14,10 @@ const films = {
   hero: {
     sources: [
       `${assetBase}/namibia-field.m4v`,
-      `${assetBase}/namibia-field-02.m4v`,
+      `${assetBase}/namibia-coast.m4v`,
     ],
     poster: `${assetBase}/namibia-poster.png`,
-    label: "Aerial views across the Namibian landscape",
+    label: "Aerial views of the Namibian landscape and coast",
   },
   bridge: {
     src: `${assetBase}/croatia-bridge.m4v`,

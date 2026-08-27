@@ -26,8 +26,8 @@ npm run lint
 The current films are configured together in the `films` object at the top of
 `app/page.tsx`.
 
-- `public/namibia-field.m4v`, `public/namibia-field-02.m4v`, and
-  `public/namibia-poster.png` are the hero playlist.
+- `public/namibia-field.m4v`, `public/namibia-coast.m4v`, and
+  `public/namibia-poster.png` are the hero playlist (landscape, then coast).
 - `public/croatia-bridge.m4v` and `public/croatia-bridge-poster.png` are the
   bridge sequence and should remain.
 - A future Namibia coast film belongs in the field-story section, replacing the
@@ -59,17 +59,17 @@ chmod +x scripts/compress-hero-video.sh
 # First clip (also refreshes the poster)
 ./scripts/compress-hero-video.sh ~/Downloads/dji_fly_20260216_175918_0185_1771262160517_video.mp4
 
-# Second clip for the hero playlist
-./scripts/compress-hero-video.sh ~/Downloads/dji_fly_20260218_123200_0215_1771429811164_video.mp4 20 namibia-field-02
+# Second clip for the hero playlist (Namibia coast)
+./scripts/compress-hero-video.sh ~/Downloads/dji_fly_20260218_123200_0215_1771429811164_video.mp4 20 namibia-coast
 
-git add public/namibia-field.m4v public/namibia-field-02.m4v public/namibia-poster.png
+git add public/namibia-field.m4v public/namibia-coast.m4v public/namibia-poster.png
 git commit -m "Update hero video playlist"
 git push
 ```
 
 The hero plays both clips back to back, then loops. The script targets **20 MB**
 per file by default (safe for web upload). Pass a second argument to change the
-cap, e.g. `./scripts/compress-hero-video.sh input.mp4 90 namibia-field-02` if
+cap, e.g. `./scripts/compress-hero-video.sh input.mp4 90 namibia-coast` if
 you only push via Terminal and want higher quality (stay under 100 MB per file).
 
 ## Publish from GitHub

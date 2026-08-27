@@ -13,7 +13,7 @@ Compresses footage for the hero section and writes:
 
 Examples:
   ./scripts/compress-hero-video.sh ~/Downloads/dji_fly_20260216_175918_0185_1771262160517_video.mp4
-  ./scripts/compress-hero-video.sh ~/Downloads/dji_fly_20260218_123200_0215_1771429811164_video.mp4 20 namibia-field-02
+  ./scripts/compress-hero-video.sh ~/Downloads/dji_fly_20260218_123200_0215_1771429811164_video.mp4 20 namibia-coast
 
 Requires ffmpeg. Default target size is 20 MB (safe for GitHub web upload).
 EOF
