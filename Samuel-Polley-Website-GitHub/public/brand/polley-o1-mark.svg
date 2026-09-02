@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Polley Consulting O mark</title>
+  <desc id="desc">An oval O with an offset rust line suggesting a second perspective.</desc>
+  <path fill="#131411" fill-rule="evenodd" d="M60 8C28 8 9 28 9 60s19 52 51 52 51-20 51-52S92 8 60 8Zm0 9c21 0 33 16 33 43s-12 43-33 43S27 87 27 60s12-43 33-43Z"/>
+  <path d="M78 26c7 9 10 20 10 34s-3 25-10 34" fill="none" stroke="#9c4f34" stroke-width="4" stroke-linecap="round"/>
+</svg>

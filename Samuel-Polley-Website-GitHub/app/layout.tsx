@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { brand } from "./siteAssets";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://yevucee.github.io/Polley-Consulting";
@@ -12,6 +13,13 @@ export const metadata: Metadata = {
   },
   description:
     "Investigative research, field intelligence and cultural insight across Africa, Europe and elsewhere.",
+  icons: {
+    icon: [
+      { url: brand.favicon, type: "image/svg+xml" },
+      { url: brand.favicon32, sizes: "32x32", type: "image/png" },
+    ],
+    apple: brand.appleTouchIcon,
+  },
   openGraph: {
     type: "website",
     title: "Samuel Polley | The story changes when you get closer",

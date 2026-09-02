@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 170" role="img" aria-labelledby="title desc">
+  <title id="title">Polley Consulting</title>
+  <desc id="desc">Reversed Polley Consulting wordmark with an offset rust line inside the letter O.</desc>
+  <g fill="#f3f0e8">
+    <text x="10" y="105" font-family="Iowan Old Style, Palatino Linotype, Baskerville, Georgia, serif" font-size="104" font-weight="400">P</text>
+    <path fill-rule="evenodd" d="M132 17C103 17 84 36 84 66s19 50 48 50 48-20 48-50-19-49-48-49Zm0 8c20 0 31 16 31 41 0 26-11 42-31 42s-31-16-31-42c0-25 11-41 31-41Z"/>
+    <text x="181" y="105" font-family="Iowan Old Style, Palatino Linotype, Baskerville, Georgia, serif" font-size="104" font-weight="400" letter-spacing="-1.5">LLEY</text>
+  </g>
+  <path d="M148.5 34.5C155.5 43.5 158.5 54 158.5 66.5c0 12.7-3.2 23.8-10.4 32.9" fill="none" stroke="#b96848" stroke-width="3" stroke-linecap="round"/>
+  <text x="95" y="151" fill="#f3f0e8" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="9">CONSULTING</text>
+</svg>

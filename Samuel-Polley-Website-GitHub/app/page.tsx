@@ -1,5 +1,7 @@
+import BrandLogo from "./BrandLogo";
 import HeroFilm from "./HeroFilm";
 import SiteHeader from "./SiteHeader";
+import { assetBase, brand } from "./siteAssets";
 
 export const metadata = {
   title: "The story changes when you get closer",
@@ -8,8 +10,6 @@ export const metadata = {
 };
 
 export const dynamic = "force-static";
-
-const assetBase = process.env.GITHUB_PAGES === "true" ? "/Polley-Consulting" : "";
 
 const films = {
   hero: {
@@ -70,7 +70,7 @@ export default function Home() {
           label={films.hero.label}
         />
         <div className="heroShade" />
-        <SiteHeader />
+        <SiteHeader brand={brand} />
         <div className="heroCopy">
           <p className="eyebrow">Investigator · Journalist · Cultural intelligence</p>
           <h1>The story changes<br />when you get closer.</h1>
@@ -199,7 +199,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <a className="wordmark" href="#top">Samuel Polley</a>
+        <BrandLogo brand={brand} reversed compact />
         <span>Zurich · Accra · Elsewhere</span>
         <span>© 2026 Polley Consulting</span>
       </footer>

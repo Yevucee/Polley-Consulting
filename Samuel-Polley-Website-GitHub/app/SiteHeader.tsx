@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import BrandLogo from "./BrandLogo";
+import type { BrandAssets } from "./siteAssets";
 
 const REVEAL_START = 20;
 const REVEAL_END = 170;
@@ -12,12 +14,22 @@ const navLinks = [
   { href: "#contact", label: "Contact" },
 ];
 
-function HeaderContent({ floating }: { floating?: boolean }) {
+type SiteHeaderProps = {
+  brand: BrandAssets;
+};
+
+function HeaderContent({
+  brand,
+  floating,
+  reversed,
+}: {
+  brand: BrandAssets;
+  floating?: boolean;
+  reversed?: boolean;
+}) {
   return (
     <>
-      <a className="wordmark" href="#top">
-        Samuel Polley
-      </a>
+      <BrandLogo brand={brand} reversed={reversed} />
       <nav aria-label={floating ? "Primary navigation (floating)" : "Primary navigation"}>
         {navLinks.map((link) => (
           <a key={link.href} href={link.href}>
@@ -38,7 +50,7 @@ function getReveal(scrollY: number, reducedMotion: boolean) {
   return Math.min(1, Math.max(0, progress));
 }
 
-export default function SiteHeader() {
+export default function SiteHeader({ brand }: SiteHeaderProps) {
   const [reveal, setReveal] = useState(0);
 
   useEffect(() => {
@@ -76,14 +88,14 @@ export default function SiteHeader() {
         style={heroStyle}
         aria-hidden={reveal > 0.85}
       >
-        <HeaderContent />
+        <HeaderContent brand={brand} reversed />
       </header>
       <header
         className="siteHeader siteHeaderFloating"
         style={floatStyle}
         aria-hidden={reveal < 0.15}
       >
-        <HeaderContent floating />
+        <HeaderContent brand={brand} floating />
       </header>
     </>
   );

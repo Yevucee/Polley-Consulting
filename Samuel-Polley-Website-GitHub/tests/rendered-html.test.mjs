@@ -33,7 +33,8 @@ test("server-renders the finished Samuel Polley website", async () => {
   assert.match(html, /Most of my work is not made public/);
   assert.match(html, /Private intelligence/);
   assert.match(html, /From above, you see the pattern/);
-  assert.match(html, /I bring the room into the investigation/);
+  assert.match(html, /Polley Consulting/);
+  assert.match(html, /brand\/polley-consulting-o1-reversed\.svg/);
   assert.doesNotMatch(html, /Field note 01|Ground truth|namibiaVisual|Tools I build|AI-assisted|vinext-starter|Your site is taking shape|FieldLens/);
 });
 
