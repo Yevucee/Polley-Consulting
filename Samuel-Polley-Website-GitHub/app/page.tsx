@@ -18,7 +18,7 @@ const films = {
       `${assetBase}/namibia-coast.m4v`,
     ],
     poster: `${assetBase}/namibia-poster.png`,
-    label: "Aerial views of the Namibian landscape and coast",
+    label: "Aerial field footage",
   },
   bridge: {
     src: `${assetBase}/croatia-bridge.m4v`,

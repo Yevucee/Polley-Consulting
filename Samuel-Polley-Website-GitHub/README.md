@@ -27,11 +27,11 @@ The current films are configured together in the `films` object at the top of
 `app/page.tsx`.
 
 - `public/namibia-field.m4v`, `public/namibia-coast.m4v`, and
-  `public/namibia-poster.png` are the hero playlist (landscape, then coast).
+  `public/namibia-poster.png` are the hero playlist (two clips, looped).
 - `public/croatia-bridge.m4v` and `public/croatia-bridge-poster.png` are the
   bridge sequence and should remain.
-- A future Namibia coast film belongs in the field-story section, replacing the
-  typographic `fieldNote` panel. It should not replace or repeat the bridge.
+
+File names are internal. The live site does not label locations in the copy.
 
 Use an optimised web export in the repository, not the original camera file.
 1080p H.264 is a good delivery format. Always include a poster image for
@@ -59,7 +59,7 @@ chmod +x scripts/compress-hero-video.sh
 # First clip (also refreshes the poster)
 ./scripts/compress-hero-video.sh ~/Downloads/dji_fly_20260216_175918_0185_1771262160517_video.mp4
 
-# Second clip for the hero playlist (Namibia coast)
+# Second clip for the hero playlist
 ./scripts/compress-hero-video.sh ~/Downloads/dji_fly_20260218_123200_0215_1771429811164_video.mp4 20 namibia-coast
 
 git add public/namibia-field.m4v public/namibia-coast.m4v public/namibia-poster.png
