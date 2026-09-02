@@ -155,27 +155,17 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .brandLogoWordmark {
   height: 50px;
 }
-.brandLogoMark {
-  display: none;
-  height: 34px;
-}
-.brandLogoCompact .brandLogoWordmark {
-  height: 50px;
-}
 @media (max-width: 820px) {
   .siteHeader .brandLogoWordmark {
-    display: none;
-  }
-  .siteHeader .brandLogoMark {
-    display: block;
+    height: 40px;
   }
 }
 @media (max-width: 520px) {
-  .brandLogoCompact .brandLogoWordmark {
-    display: none;
+  .siteHeader .brandLogoWordmark {
+    height: 34px;
   }
-  .brandLogoCompact .brandLogoMark {
-    display: block;
+  footer .brandLogoWordmark {
+    height: 42px;
   }
 }
 .wordmark {

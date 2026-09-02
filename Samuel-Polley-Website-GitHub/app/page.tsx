@@ -199,7 +199,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <BrandLogo brand={brand} reversed compact />
+        <BrandLogo brand={brand} reversed />
         <span>Zurich · Accra · Elsewhere</span>
         <span>© 2026 Polley Consulting</span>
       </footer>
